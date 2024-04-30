@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Deluxe Smart Film Coupon Manager",
+  "description": "Coupon manager designed by creativotion",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "background",
+    "tabs",
+    "storage",
+    "webNavigation",
+    "nativeMessaging",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module",
+    "minimum_chrome_version": "92"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Coupon Manager Extension",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon_100.png",
+      "24": "icons/icon_100.png",
+      "32": "icons/icon_100.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon_100.png",
+    "48": "icons/icon_100.png"
+  }
+}

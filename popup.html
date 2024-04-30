@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Dashboard | DSF Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- plugin css -->
+    <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+    <!-- preloader css -->
+    <link rel="stylesheet" href="css/preloader.min.css" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+<!-- <body data-bs-theme="dark" data-topbar="dark" data-sidebar="dark"> -->
+
+<body style="width: 600px; height: 400px;" data-bs-theme="dark" data-topbar="dark" data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box" style="height: 67px;">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="icons/icon_100.png" alt="" height="24">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="icons/icon_100.png" alt="" height="24"> <span class="logo-txt">DSF
+                                    Manager</span>
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="icons/icon_100.png" alt="" height="24">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="icons/icon_100.png" alt="" height="24"> <span class="logo-txt">DSF
+                                    Manager</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="d-flex">
+                    <div class="dropdown d-none d-sm-inline-block mx-3">
+                        <button type="button" class="btn header-item" id="mode-setting-btn">
+                            <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                            <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item bg-light-subtle border-start border-end"
+                            id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="images/users/avatar-1.jpg"
+                                alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium">Deluxe Smart Film</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" data-key="t-menu">Menu</li>
+
+                        <li>
+                            <a href="popup.html">
+                                <i class="bx bx-home"></i>
+                                <span data-key="t-dashboard">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="coupons.html">
+                                <i class="bx bxs-coupon text-primary font-size-16 align-middle me-1"></i>
+                                <span data-key="t-apps">Manage coupons</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18 mb-4">Dashboard</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Coupons</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Coupons</h4>
+                                    <div class="flex-shrink-0">
+                                        <ul class="nav nav-tabs-custom card-header-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#buy-tab"
+                                                    role="tab">Create</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#sell-tab"
+                                                    role="tab">Apply</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- end card header -->
+
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="buy-tab" role="tabpanel">
+                                            <div class="float-end ms-2">
+                                                <h5 class="font-size-14"><i
+                                                        class="bx bxs-coupon text-primary font-size-16 align-middle me-1"></i>
+                                                    <a class="text-reset">Create</a>
+                                                </h5>
+                                            </div>
+                                            <h5 class="font-size-14 mb-4">Create coupon</h5>
+                                            <form id="createForm">
+                                                <div>
+                                                    <div class="form-group mb-3">
+                                                        <label>Coupon description:</label>
+                                                        <textarea required name="" id="couponDescription" cols="30"
+                                                            rows="2" class="form-control"></textarea>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="input-group mb-3">
+                                                            <label class="input-group-text">Code</label>
+                                                            <input required type="text" id="couponCode"
+                                                                class="form-control">
+                                                        </div>
+
+                                                        <div class="input-group mb-3">
+                                                            <label class="input-group-text">Discount</label>
+                                                            <input required type="text" id="couponDiscount"
+                                                                class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="text-center">
+                                                        <button type="submit" class="btn btn-primary w-md"
+                                                            style="display: inline-flex; align-items: center;">Create
+                                                            coupon
+                                                            <i class="bx bxs-coupon mx-1"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- end tab pane -->
+                                        <div class="tab-pane" id="sell-tab" role="tabpanel">
+                                            <div class="float-end ms-2">
+                                                <h5 class="font-size-14"><i
+                                                        class="bx bxs-coupon text-primary font-size-16 align-middle me-1"></i>
+                                                    <a class="text-reset">Apply</a>
+                                                </h5>
+                                            </div>
+                                            <h5 class="font-size-14 mb-4">Apply coupon</h5>
+
+                                            <div>
+
+                                                <div class="form-group mb-3">
+                                                    <label>User email:</label>
+                                                    <input type="email" class="form-control">
+                                                </div>
+
+                                                <div>
+                                                    <div class="input-group mb-3">
+                                                        <label class="input-group-text">Coupon code</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-primary w-md"
+                                                        style="display: inline-flex; align-items: center;">Apply coupon
+                                                        <i class="bx bxs-coupon mx-1"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end tab pane -->
+                                    </div>
+                                    <!-- end tab content -->
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div><!-- end row-->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © DSF Manager All Rights Reserved.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by <a href="https://creativotion.com/" target="_blank"
+                                    class="text-decoration-underline">creativotion</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar class="h-100">
+            <div class="rightbar-title d-flex align-items-center p-3">
+
+                <h5 class="m-0 me-2">Theme Customizer</h5>
+
+                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                    <i class="mdi mdi-close noti-icon"></i>
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <hr class="m-0" />
+
+            <div class="p-4">
+                <h6 class="mb-3">Layout</h6>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout" id="layout-vertical" value="vertical">
+                    <label class="form-check-label" for="layout-vertical">Vertical</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout" id="layout-horizontal"
+                        value="horizontal">
+                    <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2">Layout Mode</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-light"
+                        value="light">
+                    <label class="form-check-label" for="layout-mode-light">Light</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-dark" value="dark">
+                    <label class="form-check-label" for="layout-mode-dark">Dark</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2">Layout Width</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-width" id="layout-width-fuild"
+                        value="fuild" onchange="document.body.setAttribute('data-layout-size', 'fluid')">
+                    <label class="form-check-label" for="layout-width-fuild">Fluid</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-width" id="layout-width-boxed"
+                        value="boxed" onchange="document.body.setAttribute('data-layout-size', 'boxed')">
+                    <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2">Layout Position</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-position" id="layout-position-fixed"
+                        value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
+                    <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-position" id="layout-position-scrollable"
+                        value="scrollable" onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
+                    <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2">Topbar Color</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-light"
+                        value="light" onchange="document.body.setAttribute('data-topbar', 'light')">
+                    <label class="form-check-label" for="topbar-color-light">Light</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-dark" value="dark"
+                        onchange="document.body.setAttribute('data-topbar', 'dark')">
+                    <label class="form-check-label" for="topbar-color-dark">Dark</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2 sidebar-setting">Sidebar Size</h6>
+
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-default"
+                        value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
+                    <label class="form-check-label" for="sidebar-size-default">Default</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-compact"
+                        value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
+                    <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-small"
+                        value="small" onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
+                    <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2 sidebar-setting">Sidebar Color</h6>
+
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-light"
+                        value="light" onchange="document.body.setAttribute('data-sidebar', 'light')">
+                    <label class="form-check-label" for="sidebar-color-light">Light</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-dark"
+                        value="dark" onchange="document.body.setAttribute('data-sidebar', 'dark')">
+                    <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand"
+                        value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                    <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+                </div>
+
+                <h6 class="mt-4 mb-3 pt-2">Direction</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-ltr"
+                        value="ltr">
+                    <label class="form-check-label" for="layout-direction-ltr">LTR</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-direction" id="layout-direction-rtl"
+                        value="rtl">
+                    <label class="form-check-label" for="layout-direction-rtl">RTL</label>
+                </div>
+
+            </div>
+
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Injected Toasts -->
+    <div class="toasts"></div>
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/metisMenu.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src="js/waves.min.js"></script>
+    <script src="js/feather.min.js"></script>
+    <!-- pace js -->
+    <script src="js/pace.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="js/apexcharts.min.js"></script>
+
+    <!-- Plugins js-->
+    <script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- dashboard init -->
+    <script src="js/dashboard.init.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/content.js"></script>
+
+</body>
+
+</html>
