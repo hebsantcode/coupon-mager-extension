@@ -170,7 +170,7 @@ document.querySelector("#applyForm").addEventListener("submit", async (e) => {
               <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
           <div class="toast-body" bis_skin_checked="1">
-            The email ${res.email} has already used the coupon.
+            ${res.email ? `The email ${res.email} has already used the coupon.` : `The email ${document.querySelector('#emailApply').value} is not a mailchimp subscriber.`}
           </div>
       </div>
     </div>`;
