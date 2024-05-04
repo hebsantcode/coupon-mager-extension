@@ -13814,9 +13814,9 @@ button {
   border-color: rgba(var(--bs-light-rgb), 0.75);
 }
 [data-bs-theme="dark"] .btn-dark {
-  color: var(--bs-light);
-  background-color: var(--bs-gray-200);
-  border-color: var(--bs-dark);
+  color: white;
+  background-color: var(--bs-gray-900);
+  border-color: var(--bs-gray-900);
 }
 [data-bs-theme="dark"] .btn-dark:hover {
   color: var(--bs-light);

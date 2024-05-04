@@ -9,6 +9,7 @@ function main() {
 
   chrome.runtime.sendMessage(message, function (response) {
     if (response) {
+      console.log(response)
       if (response.error) {
         console.error(response.error);
       } else {
